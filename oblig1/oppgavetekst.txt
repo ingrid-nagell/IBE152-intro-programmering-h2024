@@ -1,0 +1,49 @@
+Lag programmet "mittskall.py".  Lever som fil i Canvas innen fristen.  Kan leveres som Notebook om ønskelig.
+
+Greit om dere jobber sammen (max 3). Lever individuelt (har ikke aktivert gruppeinnlevering). Skriv navnene inn som Python-kommentar (# Skrevet av A og B).
+
+Du bestemmer selv hvordan du vil lage programmet.  Det vanlige er å jobbe lokalt med Python installert på din maskin og en teksteditor (f.eks. notepad, notepad++ e.l.).  Hvis IDLE følger med Python kan du bruke det. VSCode eller Pycharm er mer avanserte verktøy (IDE). På forelesninger har du sett en del av disse demonstrert.
+
+Du kan bruke alle hjelpemidler. Legg inn referanser som Python-kommentar hvis du kopierer kode helt eller delvis, f.eks. # hentet fra http://...,Links to an external site. gjelder også dialoger du har med AI-er.
+
+Oppgavene er gradert (enklest, middels, vanskelig) Du bestemmer selv om du vil gjøre en eller flere.  Alle må minimum ha utført den enkleste. Hvis du forsøker de andre to bestemmer du selv hvor mange deloppgaver du vil gjøre.
+
+Spør gjerne om hjelp.  Ikke sitt mer enn 15 minutt før du tar en tenkepause eller spør noen.  Spørsmål kan sendes på Canvas, epost, kontoret, i forelesningspause.
+
+
+
+ENKLEST: LØKKE
+
+Dette skal bli et skall som ligner på Python sin REPL eller Windows sitt Powershell (eller gamle Cmd), samt Mac og Linux sitt Terminalvindu.  Vi kaller disse for kommandotolker eller på engelsk: Command Line Interface (CLI). Brukeren skriver inn kommando som tekst og trykker Enter for å få den tolket (interpreted) og utført.  En slik arbeidsform kalles interaktiv.
+
+Ved oppstart skal programmet skrive en velkomst (bruk print-setning): Velkommen til Mitt Skall v0.01.
+
+Sjekk at det virker ved å kjøre det. Om du jobber lokalt kan du f.eks. kjøre det fra terminal.  F.eks. i Windows:  Start powershell og skriv python mittskall.py. Kan hende det kan kjøres ved å dobbeltklikke på mittskall.py i utforsker, noe som krever at Python.exe ligger i PATH. Jobber du online (i en slags notebook) kjører du cellene slik vist i forelesning.
+
+Legg til en interaktiv løkke slik vist på forelesning.  Etter velkomsten vil programmet gjenta følgende (med while-løkke):  Vis prompt, ta imot kommando, utfør kommando.  Promptet kan være "> ".  Bruk input() for å ta imot kommando (se forel og kap. 5Links to an external site.). Hvis bruker skriver "avslutt" avsluttes programmet (bruk if-setning) med en avsluttende "Takk og farvel!".  Hvis noe annet skrives (else-delen), skriver programmet "Ukjent kommando".
+
+
+
+MIDDELS: VIS INFORMASJON
+
+Her skal du hente ut informasjon og vise. Trenger ikke bruke variabler. Hvert punkt viser hva kommandoen skal være (i fet skrift), med en beskrivelse
+
+"om" skal vise info om programmet, som f.eks. "mittskall.py Ada Stien A/S, v0.01 September 2024, Lisens: MIT"
+"hjelp" gir hjelpetekst f.eks. "Kommandoer som støttes: avslutt, om, hjelp".
+"vistid" viser dato og klokkeslett.  Bruk modulen datetime. Du bestemmer format, men for eksempel "10:43.11 den 12. august 2024".  Se f.eks. w3schoolsLinks to an external site. for tips.
+"vismappe" viser hvilken mappe vi står i.  Bruk os-modulen sin getcwd() til dette (se Files-kapitletLinks to an external site.).
+"byttmappe" lar bruker oppgi ny mappe, som programmet så flytter til.  Bruk os-modulen sin chdir() til dette.  Sjekk at dette fungerer om bruker skriver relative stier som ".." eller "../../bilder", og absolutte stier som "/users/".
+"visfiler" viser filene i mappen vi står i.  Bruk os.listdir() til dette.  Resultatet er ei liste med filnavn. Skriv ut hele listen, vi skal lære mer om lister senere.
+"vismiljø" viser os.environ, som er en lang dictionary med nøkler og verdier. Bare skriv ut denne, vi skal lære mer om dictionary senere.
+"visbrukernavn" viser hvilket brukernavn vi har.  Ligger i os.environ['USER'] (eventuelt USERNAME som nøkkel).
+"vispath" viser gjeldende PATH, altså søkesti.  Ligger også i os.environ med nøkkel PATH.
+
+
+VANSKELIG:  HUKOMMELSE
+
+Her får du noen oppgaver som krever at du lagrer noe i variabel.
+
+"nyprompt" lar bruker oppgi ny prompt.  Programmet skriver "Oppgi ny prompt: ", og det bruker svarer blir da ny prompt.  Hvis bruker svarer "# ", skal programmet heretter prompte med "# ". For å løse dette må du lagre promptet i en variabel som du så skriver ut i stedet for en konstant (f.eks. prompt = input(...) og input (prompt).
+"hvorlenge" viser hvor mange timer, minutter og sekunder programmet har vært i gang.  Bruk time-modulen sin time-funksjon, se eksempel i forelesning og hos StackoverflowLinks to an external site..  Dette krever at du husker når programmet startet.
+"kakeplanlegger" viser minimum antall kaker som må bakes for at alle gjestene skal få minst ett kakestykke. Først må det spørre hvor mange gjester som kommer, og deretter hvor mange kakestykker hver kake gir (anta at alle kaker gir like mange stykker).  Når du vet disse to verdiene kan du regne ut svaret. Her kan du bruke heltallsdivisjon.  Hvis jeg svarer 10 og 7 er svaret 2 (vi må bake 2 kaker hvis det kommer 10 gjester og hver kake består av 7 kakestykker, hvis hver gjest skal få minst 1 kakestykke). Hvis jeg svarer 5 gjester og 2 stykker per kake, er svaret 3.  Hvis det er 0 gjester og 4 stykker per kake, er svaret 0.
+(slutt)
