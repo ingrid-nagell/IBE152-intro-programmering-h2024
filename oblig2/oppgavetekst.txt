@@ -1,0 +1,72 @@
+Målet er å øve på kapittel 3 og 4 om funksjoner og generalisering.  Du skal utvide programmet du laget i oblig 1, ved å legge til kommandoer.  Kopier derfor mittskall.py til mittskall2.py som du jobber videre på. Lever mittskall2.py som en enkelt fil i Canvas innen fristen.  Kan leveres som Notebook om ønskelig.
+
+Greit om dere jobber sammen (max 3). Lever individuelt (har ikke aktivert gruppeinnlevering). Skriv navnene inn som Python-kommentar (# Skrevet av A og B).
+
+Du kan bruke alle hjelpemidler. Legg inn referanser som Python-kommentar hvis du kopierer kode helt eller delvis, f.eks. # hentet fra <url>. Gjelder også dialoger du har hatt med AI-er. Hvis du har fått vesentlig hjelp av noen skriver du # med hjelp fra NN
+
+Oppgavene er gradert (enklest, middels, vanskelig) Du bestemmer selv om du vil gjøre en eller flere.  Alle må minimum ha utført den enkleste. Hvis du forsøker de andre to bestemmer du selv hvor mange deloppgaver du vil gjøre.
+
+Ikke sitt mer enn 15 minutt før du tar en tenkepause eller spør noen.  Se Hjelp til programmering.
+
+
+
+STATISK BOKSING (ENKEL)
+
+Legg til kommandoen "p".  Når bruker skriver "p" blir forrige kommando utført.
+
+Legg til kommandoen "statiskboks". Når bruker skriver dette, vil programmet kalle på funksjonen tegnstatiskboks().  Denne funksjoner lager du. Den bruker 4 print-setninger til å tegne følgende.
+
+****
+****
+****
+****
+altså 4 linjer.  På hver linje står det 4 stjernetegn. Det er en firkantet kloss med stjerner. Tips: Strenger kan lages med string-multiplikasjon, som " "*7.
+
+Hvis du ikke har den, legg til "hjelp" som forklarer brukeren hvilke kommandoer som er tilgjengelig.
+
+
+
+GENERALISERT BOKSING (MIDDELS):
+
+Legg til kommandoen "dynamiskboks" som spør bruker om "Oppgi N:" Den kaller så på funksjonen tegnboks(x), som tegner en boks  som har x linjer, der hver linje har x tegn. Her er x altså navnet på parametret i funksjonen. Bruk for-løkke.
+
+Utvid slik at bruker også kan oppgi hvilket tegn boksen skal tegnes med. Da må tegnboks få en ekstra parameter og kalles som tegnboks(tegn,x).  Dette kalles en GENERALISERING av funksjonen, slik nevnt i læreboka.
+
+
+
+DIVERSE FORMER (VANSKELIG)
+
+Lag kommando "rombe" der brukeren må oppgi tegn, høyde og bredde.  Romben tegnes av funksjonen tegnrombe (tegn, høyde, bredde). Eksempel: tegnrombe ("*", 3, 2) gir følgende:
+
+**
+ **
+  **
+Lag kommando "åpenboks" som tegner omrisset av en boks. Brukeren skal oppgi tegn og dimensjoner.  Boksen tegnes av tegnåpenboks (tegn, høyde, bredde).Med argumentene ("+", 4, 4) får vi:
+
+++++
++  +
++  +
+++++
+altså er linje 1 (øverste) og nederste linje tegnet fullt ut, mens linje 2, 3, 4 osv viser tegnet, etterfulgt av et antall blanke, og til sist tegnet.
+
+Kommando "seil" lar brukeren oppgi tegn og høyde for å få tegnet Seilet Hotell i varierte størrelser.  Kall opp tegnseil (tegn, høyde) som tegner slik at første linje har 1 stjerne, andre har 2 stjerner, og den siste (nederste) har "høyde" antall stjerner. Med tegnseil ("*", 7) vil nederste linje ha 7 stjerner. Resultatet er at vi får et seil med loddrett venstre kant og en skrå høyrekant:
+
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+    *******
+Lag kommando "pyramide" som lar bruker oppgi tegn og høyde og få tegnet en slags pyramide, som tegnes av tegnpyramide (tegn, høyde ). Den skal bli like bred som den er høy.  På øverste linje (linje 1) står det kun ett tegn, og det skal være midtplassert.  På nest øverste linje (linje 2) står det 2 tegn, og det skal også være midtplassert, noe som blir vanskelig i praksis når vi har så grovkornet tegneflate.  På linje 3 står det 3 tegn, og de skal stå midtstilt. For å få til midtstillingen, må hver linje først ha et visst antall blanke. På nederste linje står det tegn i hele bredden.  Med kallet tegnpyramide ("*", 7) får jeg følgende
+
+    *
+    **
+   ***
+   ****
+  *****
+  ******
+ *******
+Den blir ikke helt symmetrisk på grunn av nevnte problem. Kan vel ligne litt på et skjevt juletre.
+
+(slutt oblig)
