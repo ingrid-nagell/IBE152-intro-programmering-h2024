@@ -126,7 +126,6 @@ def mittskall():
     """Funksjon som samler all funskjonalitet i ett program.
     """
     program_start = datetime.now()
-    avslutt = False
     print(f"""
     -----------------------------------------
         Velkommen til Mitt Skall v{VERSJON}
@@ -135,11 +134,11 @@ def mittskall():
     print(hjelp())
     prompt = "----\nSkriv inn kommando (tast [a] eller [avslutt] for å ende programmet):\n"
 
-    while avslutt == False:
+    while True:
         tekst_inn = input(prompt).lower()
         if tekst_inn in ('a', 'avslutt'):
             print("Takk og farvel!")
-            avslutt = True
+            break
         elif tekst_inn in kommandoer_dict.keys():
             action = kommandoer_dict.get(tekst_inn)
             action()
